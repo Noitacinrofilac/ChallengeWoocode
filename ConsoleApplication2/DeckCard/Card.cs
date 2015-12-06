@@ -92,9 +92,5 @@ namespace ChallengeWoocode.DeckCard
                 return true;
             return false;
         }
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
     }
 }
