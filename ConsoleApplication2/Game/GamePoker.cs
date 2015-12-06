@@ -1,4 +1,4 @@
-﻿using ChallengeWoocode.Deck;
+﻿using ChallengeWoocode.DeckCard;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +24,7 @@ namespace ChallengeWoocode.Game
             }
         }
         /*Base Methods*/
-        public string boardInfo()
+        public override string boardInfo()
         {
             return base.boardInfo() + "Highest bet = " + this.bets.Values.Max() + "\n"; ;
         }
@@ -42,6 +42,7 @@ namespace ChallengeWoocode.Game
         {
             Console.WriteLine("Welcome to the poker game");
             this.setupGame();
+            
             if (this.nextTurn(3))
             {
                 Console.WriteLine("*************************END TURN 1*************************");
@@ -61,15 +62,17 @@ namespace ChallengeWoocode.Game
         {
             this.dealerDeck.shuffle();
             this.dealerDeck.deal(2, 1, players); // Deal during 2 turns 1 cards
+            
         }
         public override bool nextTurn(int cardDrawn)
         {
             Console.WriteLine("*************************TURN Info*************************");
             Console.WriteLine(this.boardInfo());
             Console.WriteLine(this.playersInfo());
-            Console.WriteLine("*************************TURN Info*************************");
+            Console.WriteLine("*************************!TURN Info*************************");
             this.playerBet();
             this.board.AddRange(this.dealerDeck.draw(cardDrawn));
+
             handsValue();
             if (this.winCondition())
             {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChallengeWoocode.Deck
+namespace ChallengeWoocode.DeckCard
 {
     /// <summary>
     /// The abstract class Deck defines the patern of a deck

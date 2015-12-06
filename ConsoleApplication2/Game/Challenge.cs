@@ -14,9 +14,15 @@ namespace ChallengeWoocode.Game
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            //Game game = new GamePoker(4);
-            Game game = new GameWar(2);
+            int isPoker = 1;
+            Game game;
+            if (isPoker == 1)
+                game = new GamePoker(4);
+            else
+                game = new GameWar(2);
             game.play();
+            Console.WriteLine(game.boardInfo());
+            Console.ReadLine();
         }
     }
 }

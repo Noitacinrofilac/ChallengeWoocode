@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChallengeWoocode.Deck
+namespace ChallengeWoocode.DeckCard
 {
     /// <summary>
     /// Enum defining the usual colors of the cards
@@ -81,10 +81,14 @@ namespace ChallengeWoocode.Deck
         {
             return value + "_" + color;
         }
+        
         public override bool Equals(object obj)
         {
             Card card = obj as Card;
-            if (card.color.Equals(this.color) && card.value.Equals(this.value))
+            if (card == null)
+                return false;
+
+            if (this.sameColor(card) && this.sameValue(card))
                 return true;
             return false;
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChallengeWoocode.Deck
+namespace ChallengeWoocode.DeckCard
 {
     public class PlayersDeck : Deck
     {
@@ -22,16 +22,6 @@ namespace ChallengeWoocode.Deck
             drawnCards.Add(cards.ElementAt(0));
             cards.RemoveAt(0);
             return drawnCards;
-        }
-
-        public string display()
-        {
-            return base.display();
-        }
-        /*Deck's Methods*/
-        public int amountCards()
-        {
-            return base.amountCards();
         }
         //Player's methods
         /// <summary>

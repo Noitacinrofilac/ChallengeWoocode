@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ChallengeWoocode.Deck;
+using ChallengeWoocode.DeckCard;
 
 namespace ChallengeWoocode.Game
 {
@@ -27,7 +27,7 @@ namespace ChallengeWoocode.Game
             {
                 players.Add(new Player(i));
             }
-            
+
         }
         /*********Methods*********/
         /// <summary>
@@ -36,12 +36,12 @@ namespace ChallengeWoocode.Game
         ///     Display cards
         /// </summary>
         /// <returns>The basic information of the board</returns>
-        public string boardInfo()
+        public virtual string boardInfo()
         {
             string res = "Board : " + this.board.Count + " cards : \n";
             foreach (Card c in this.board)
             {
-                res += c + "\n";
+                res += "\t" + c + "\n";
             }
             return res;
         }
@@ -52,7 +52,7 @@ namespace ChallengeWoocode.Game
         /// <returns>players information</returns>
         public abstract string playersInfo();
         /// <summary>
-        /// Define the rule of the game 
+        /// Define the rule of the game and launch it
         /// </summary>
         public abstract void play();
         /// <summary>

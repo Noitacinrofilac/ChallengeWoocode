@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ChallengeWoocode.Game;
 
-namespace ChallengeWoocode.Deck
+namespace ChallengeWoocode.DeckCard
 {
     /// <summary>
     /// Define the Dealer's deck
@@ -40,15 +40,6 @@ namespace ChallengeWoocode.Deck
             return cards;
         }
 
-        /*Deck's Methods*/
-        public int amountCards()
-        {
-            return base.amountCards();
-        }
-        public string display()
-        {
-            return base.display();
-        }
 
         //Dealer's methods
         /// <summary>

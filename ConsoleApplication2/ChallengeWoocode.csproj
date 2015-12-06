@@ -41,14 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deck\Card.cs" />
+    <Compile Include="DeckCard\Card.cs" />
     <Compile Include="Game\Challenge.cs" />
-    <Compile Include="Deck\Deck.cs" />
-    <Compile Include="Deck\DealersDeck.cs" />
+    <Compile Include="DeckCard\Deck.cs" />
+    <Compile Include="DeckCard\DealersDeck.cs" />
     <Compile Include="Game\GamePoker.cs" />
     <Compile Include="Game\GameWar.cs" />
     <Compile Include="Game\Player.cs" />
-    <Compile Include="Deck\PlayersDeck.cs" />
+    <Compile Include="DeckCard\PlayersDeck.cs" />
     <Compile Include="Game\Game.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
